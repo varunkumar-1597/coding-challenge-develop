@@ -15,6 +15,7 @@ namespace XWP\SiteCounts;
 if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 	require_once __DIR__ . '/vendor/autoload.php';
 }
-
+require_once __DIR__ . '/php/Block.php';
+require_once __DIR__ . '/php/Plugin.php';
 $plugin = new Plugin( __FILE__ );
 add_action( 'plugins_loaded', [ $plugin, 'init' ] );
